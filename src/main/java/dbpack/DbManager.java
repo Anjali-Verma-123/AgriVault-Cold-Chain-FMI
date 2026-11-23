@@ -14,7 +14,16 @@ public class DbManager {
     public DbManager() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fmidb?characterEncoding=utf-8", "root", "root123");
+            
+            String dbHost = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
+            String dbPort = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "3306";
+            String dbName = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "fmidb";
+            String dbUser = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "root";
+            String dbPass = System.getenv("DB_PASS") != null ? System.getenv("DB_PASS") : "root123";
+
+            String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useSSL=true&requireSSL=false&allowPublicKeyRetrieval=true&characterEncoding=utf-8";
+            con = DriverManager.getConnection(url, dbUser, dbPass);
+            
         } catch (ClassNotFoundException e1) {
             e1.printStackTrace();
         } catch (SQLException e2) {
