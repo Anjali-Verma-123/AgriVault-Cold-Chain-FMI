@@ -1,5 +1,6 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="dbpack.DbManager"%>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4L10 13V30C10 44.5 19.4 57.6 32 61C44.6 57.6 54 44.5 54 30V13L32 4Z' fill='%23198754'/%3E%3Cpath d='M32 8V56.5C42.2 53.4 49.5 42.3 49.5 30V15.8L32 8Z' fill='%230d6efd'/%3E%3C/svg%3E"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
@@ -28,9 +29,22 @@
 <!-- Main Corporate Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
     <div class="container">
-        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="index.jsp">
-            <i class="bi bi-snow2 text-warning me-2 fs-3"></i>
-            <span>AgriVault Cold Chain <small class="fs-6 fw-normal text-light opacity-75 d-none d-md-inline">| FMI Portal</small></span>
+        <a class="navbar-brand d-flex align-items-center fw-bold" href="index.jsp">
+            <svg width="42" height="42" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2 flex-shrink-0">
+                <!-- Outer Vault Shield -->
+                <path d="M32 4L10 13V30C10 44.5 19.4 57.6 32 61C44.6 57.6 54 44.5 54 30V13L32 4Z" fill="#198754" stroke="#ffffff" stroke-width="2.5"/>
+                <!-- Inner Cold Chain Split -->
+                <path d="M32 8V56.5C42.2 53.4 49.5 42.3 49.5 30V15.8L32 8Z" fill="#0d6efd"/>
+                <!-- Wheat Leaf (Left - Agri) -->
+                <path d="M25 42C20 38 18 31 21 24C25 27 27 33 25 42Z" fill="#ffc107"/>
+                <path d="M26 35C22 31 21 25 24 19C27 22 28 28 26 35Z" fill="#ffe082"/>
+                <!-- Snowflake Crystal (Right - Cold Chain) -->
+                <path d="M39 21V41M31 26L47 36M47 26L31 36" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div class="lh-1">
+                <span class="d-block fs-4 text-white">AgriVault <span class="text-warning">Cold Chain</span></span>
+                <small class="text-light opacity-75 fw-semibold" style="font-size: 0.68rem; letter-spacing: 1.4px;">FARMER MERCHANT INTEGRATION</small>
+            </div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>

@@ -17,6 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>AgriVault Cold Chain | Farmer Merchant Integration</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4L10 13V30C10 44.5 19.4 57.6 32 61C44.6 57.6 54 44.5 54 30V13L32 4Z' fill='%23198754'/%3E%3Cpath d='M32 8V56.5C42.2 53.4 49.5 42.3 49.5 30V15.8L32 8Z' fill='%230d6efd'/%3E%3C/svg%3E"/>
   </head>
   <body>
     <jsp:include page="header.jsp" />
